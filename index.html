@@ -32,18 +32,34 @@
     <section id="home" class="hero">
       <div class="hero-content">
         <div class="profile-img">
-          <img src="assets/perfil.jpg" alt="Braian Gaspar" />
+          <img
+            src="assets/perfil.png"
+            alt="Braian Gaspar"
+            onerror="this.src = 'https://via.placeholder.com/200?text=Braian'"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center 20%;
+            "
+          />
         </div>
         <h1>Braian <span class="highlight">Gaspar da Rosa</span></h1>
-        <h2>Desenvolvedor Full Stack | PHP • Node.js • Flutter</h2>
+        <h2 style="color: white">
+          Desenvolvedor Full Stack | PHP • Node.js • Flutter
+        </h2>
         <p>
           +2 anos construindo soluções escaláveis e performáticas para
           indústrias e sistemas críticos
         </p>
         <div class="social-links">
           <a href="https://github.com/BraianGaspar" target="_blank">GitHub</a>
-          <a href="#" target="_blank">LinkedIn</a>
-          <a href="#" target="_blank">Portfólio</a>
+          <a
+            href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://wa.me/5545988353553" target="_blank">WhatsApp</a>
         </div>
         <a href="#contato" class="btn">Vamos codar juntos?</a>
       </div>
@@ -100,6 +116,7 @@
               <span>Node.js</span>
               <span>NestJS</span>
               <span>TypeScript</span>
+              <span>Java</span>
               <span>APIs REST</span>
             </div>
           </div>
@@ -117,6 +134,7 @@
             <div class="skills">
               <span>jQuery</span>
               <span>Vue.js</span>
+              <span>Next.js</span>
               <span>Flutter</span>
               <span>HTML/CSS</span>
             </div>
@@ -164,7 +182,7 @@
           <div class="timeline-item">
             <div class="timeline-date">2024 — 2027</div>
             <div class="timeline-content">
-              <h4>Engenharia de Software</h4>
+              <h4>Engenharia de Software - 5º Período</h4>
               <p>Faculdade Assis Gurgacz — Cascavel/PR (cursando)</p>
             </div>
           </div>
@@ -177,63 +195,44 @@
         <h2>Projetos em Destaque</h2>
         <div class="projetos-grid">
           <div class="projeto-card">
-            <div class="projeto-icon">🏭</div>
-            <h3>Sistema Industrial ERP</h3>
+            <div class="projeto-icon">📚</div>
+            <h3>BeReady</h3>
             <p>
-              Módulos de gestão para indústria com PHP e Oracle, otimizando
-              processos internos e reduzindo tempo de resposta.
+              Plataforma de ensino de idiomas com foco em aprendizado interativo
+              e gamificado.
             </p>
             <div class="projeto-tech">
               <span>PHP</span>
-              <span>Oracle</span>
-              <span>jQuery</span>
-            </div>
-            <a href="#" class="btn-small">Ver repositório</a>
-          </div>
-
-          <div class="projeto-card">
-            <div class="projeto-icon">📱</div>
-            <h3>App Flutter + API NestJS</h3>
-            <p>
-              Aplicação mobile para gestão de tarefas com back-end robusto em
-              NestJS e TypeScript.
-            </p>
-            <div class="projeto-tech">
-              <span>Flutter</span>
-              <span>NestJS</span>
-              <span>TypeScript</span>
-            </div>
-            <a href="#" class="btn-small">Ver repositório</a>
-          </div>
-
-          <div class="projeto-card">
-            <div class="projeto-icon">🌐</div>
-            <h3>API REST com Node.js</h3>
-            <p>
-              API completa com autenticação JWT, validações e integração com
-              MySQL.
-            </p>
-            <div class="projeto-tech">
-              <span>Node.js</span>
-              <span>Express</span>
+              <span>JavaScript</span>
               <span>MySQL</span>
             </div>
-            <a href="#" class="btn-small">Ver repositório</a>
+            <a
+              href="https://github.com/BraianGaspar/Beready_Projeto"
+              target="_blank"
+              class="btn-small"
+              >Ver no GitHub →</a
+            >
           </div>
 
           <div class="projeto-card">
-            <div class="projeto-icon">🖥️</div>
-            <h3>Dashboard Vue.js</h3>
+            <div class="projeto-icon">🌡️❄️</div>
+            <h3>Efraim Ar-Condicionados</h3>
             <p>
-              Interface dinâmica para consumo de dados em tempo real com Vue.js
-              e Chart.js.
+              E-commerce completo para venda de ar-condicionados com gestão de
+              produtos e carrinho de compras.
             </p>
             <div class="projeto-tech">
-              <span>Vue.js</span>
-              <span>Axios</span>
-              <span>CSS3</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Node.js</span>
+              <span>Tailwind</span>
             </div>
-            <a href="#" class="btn-small">Ver repositório</a>
+            <a
+              href="https://github.com/BraianGaspar/Efraim-ar-condicionado"
+              target="_blank"
+              class="btn-small"
+              >Ver no GitHub →</a
+            >
           </div>
         </div>
       </div>
@@ -244,7 +243,7 @@
         <h2>Vamos construir algo incrível?</h2>
         <div class="contato-content">
           <div class="contato-info">
-            <p>📧 <strong>braian_gaspar@hotmail.com</strong></p>
+            <p>📧 <strong>braiangaspar.dev@gmail.com</strong></p>
             <p>📱 <strong>(45) 98835-3553</strong></p>
             <p>📍 <strong>Cascavel - PR</strong></p>
             <p>
@@ -253,15 +252,27 @@
             </p>
             <div class="social-links-footer">
               <a href="https://github.com/BraianGaspar">GitHub</a>
-              <a href="#">LinkedIn</a>
+              <a
+                href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/"
+                >LinkedIn</a
+              >
+              <a href="https://wa.me/5545988353553">WhatsApp</a>
             </div>
           </div>
-          <form class="contato-form" action="#" method="POST">
-            <input type="text" placeholder="Seu nome" required />
-            <input type="email" placeholder="Seu e-mail" required />
-            <input type="text" placeholder="Assunto" />
-            <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-            <button type="submit" class="btn">Enviar mensagem</button>
+          <form class="contato-form" id="contactForm">
+            <input type="text" id="nome" placeholder="Seu nome" required />
+            <input type="email" id="email" placeholder="Seu e-mail" required />
+            <input type="text" id="assunto" placeholder="Assunto" />
+            <textarea
+              id="mensagem"
+              placeholder="Sua mensagem"
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit" class="btn" id="sendBtn">
+              Enviar mensagem ✨
+            </button>
+            <div id="formFeedback" class="feedback"></div>
           </form>
         </div>
       </div>
@@ -269,7 +280,7 @@
 
     <footer>
       <p>© 2025 Braian Gaspar da Rosa | Desenvolvedor Full Stack</p>
-      <p>Feito com ☕ e código limpo</p>
+      <p>Feito com ☕, 💻 e código limpo</p>
     </footer>
 
     <script src="script.js"></script>

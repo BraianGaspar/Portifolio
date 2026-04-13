@@ -7,280 +7,317 @@
       name="description"
       content="Portfólio de Braian Gaspar - Desenvolvedor PHP, Node.js, Flutter com inglês avançado"
     />
+    <meta name="theme-color" content="#0f0f1f" />
+    <meta name="author" content="Braian Gaspar da Rosa" />
     <title>Braian Gaspar | Desenvolvedor Full Stack</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Preload de imagem crítica -->
+    <link rel="preload" as="image" href="assets/perfil.png" />
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">{ Braian Gaspar }</div>
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
+      <nav aria-label="Navegação principal">
+        <div class="logo" aria-label="Logo">{ Braian Gaspar }</div>
+        <div class="nav-controls">
+          <button id="languageBtn" class="lang-btn" aria-label="Trocar idioma / Switch language">
+            <span class="lang-text">🇧🇷 PT</span>
+            <span class="lang-text hidden">🇺🇸 EN</span>
+          </button>
+          <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+        <ul class="nav-menu" role="list">
+          <li><a href="#home" data-key="nav_home">Início</a></li>
+          <li><a href="#sobre" data-key="nav_sobre">Sobre</a></li>
+          <li><a href="#habilidades" data-key="nav_habilidades">Habilidades</a></li>
+          <li><a href="#experiencia" data-key="nav_experiencia">Experiência</a></li>
+          <li><a href="#projetos" data-key="nav_projetos">Projetos</a></li>
+          <li><a href="#contato" data-key="nav_contato">Contato</a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <div class="profile-img">
-          <img
-            src="assets/perfil.png"
-            alt="Braian Gaspar"
-            onerror="this.src = 'https://via.placeholder.com/200?text=Braian'"
-            style="
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              object-position: center 20%;
-            "
-          />
-        </div>
-        <h1>Braian <span class="highlight">Gaspar da Rosa</span></h1>
-        <h2 style="color: white">
-          Desenvolvedor Full Stack | PHP • Node.js • Flutter
-        </h2>
-        <p>
-          +2 anos construindo soluções escaláveis e performáticas para
-          indústrias e sistemas críticos
-        </p>
-        <div class="social-links">
-          <a href="https://github.com/BraianGaspar" target="_blank">GitHub</a>
-          <a
-            href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/"
-            target="_blank"
-            >LinkedIn</a
-          >
-          <a href="https://wa.me/5545988353553" target="_blank">WhatsApp</a>
-        </div>
-        <a href="#contato" class="btn">Vamos codar juntos?</a>
-      </div>
-    </section>
-
-    <section id="sobre" class="sobre">
-      <div class="container">
-        <h2>Sobre Mim</h2>
-        <div class="sobre-content">
-          <div class="sobre-texto">
-            <p>
-              Sou desenvolvedor de software com foco em
-              <strong>back-end</strong>, mas sem medo de encarar o front e o
-              mobile quando necessário. Atualmente trabalho na
-              <strong>Consilos Industrial</strong>, onde mantenho e evoluo
-              sistemas internos que rodam processos críticos da indústria.
-            </p>
-
-            <p>
-              Tenho experiência prática com
-              <strong>PHP, jQuery, MySQL e Oracle SQL</strong>, e venho
-              estudando e aplicando
-              <strong>Node.js, NestJS, TypeScript e Vue.js</strong> para
-              construir arquiteturas mais modernas e performáticas. Também
-              desenvolvo aplicações mobile com <strong>Flutter</strong>.
-            </p>
-
-            <p>
-              Inglês avançado — consumo documentação técnica e conteúdo
-              internacional sem barreiras, além de colaborar em projetos
-              globais.
-            </p>
-
-            <div class="info-rapida">
-              <div><span>📍</span> Cascavel - PR</div>
-              <div><span>📞</span> (45) 98835-3553</div>
-              <div><span>🎂</span> 19 anos</div>
-              <div><span>🚗</span> CNH B</div>
-              <div><span>🌐</span> Inglês Avançado</div>
-            </div>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <div class="profile-img">
+            <img
+              src="assets/perfil.png"
+              alt="Braian Gaspar - Desenvolvedor Full Stack"
+              width="200"
+              height="200"
+              loading="eager"
+              fetchpriority="high"
+              onerror="this.src = 'https://via.placeholder.com/200?text=Braian'"
+            />
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="habilidades" class="habilidades">
-      <div class="container">
-        <h2>Stack Tecnológica</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Back-end</h3>
-            <div class="skills">
-              <span>PHP</span>
-              <span>Node.js</span>
-              <span>NestJS</span>
-              <span>TypeScript</span>
-              <span>Java</span>
-              <span>APIs REST</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Banco de Dados</h3>
-            <div class="skills">
-              <span>MySQL</span>
-              <span>Oracle SQL</span>
-              <span>Modelagem</span>
-              <span>Consultas Complexas</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Front-end & Mobile</h3>
-            <div class="skills">
-              <span>jQuery</span>
-              <span>Vue.js</span>
-              <span>Next.js</span>
-              <span>Flutter</span>
-              <span>HTML/CSS</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Ferramentas</h3>
-            <div class="skills">
-              <span>Git</span>
-              <span>Docker</span>
-              <span>Postman</span>
-              <span>Linux</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experiencia" class="experiencia">
-      <div class="container">
-        <h2>Experiência Profissional</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">Dez 2024 — Atual</div>
-            <div class="timeline-content">
-              <h3>Desenvolvedor PHP</h3>
-              <h4>Consilos Industrial · Cascavel/PR</h4>
-              <ul>
-                <li>
-                  Desenvolvimento e manutenção de sistemas internos com PHP e
-                  jQuery
-                </li>
-                <li>
-                  Implementação de funcionalidades estratégicas para o negócio
-                </li>
-                <li>Otimização de performance de rotinas críticas</li>
-                <li>Manipulação e modelagem em MySQL e Oracle SQL</li>
-                <li>Correção de bugs e evolução contínua dos sistemas</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="formacao">
-          <h3>🎓 Formação Acadêmica</h3>
-          <div class="timeline-item">
-            <div class="timeline-date">2024 — 2027</div>
-            <div class="timeline-content">
-              <h4>Engenharia de Software - 5º Período</h4>
-              <p>Faculdade Assis Gurgacz — Cascavel/PR (cursando)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projetos" class="projetos">
-      <div class="container">
-        <h2>Projetos em Destaque</h2>
-        <div class="projetos-grid">
-          <div class="projeto-card">
-            <div class="projeto-icon">📚</div>
-            <h3>BeReady</h3>
-            <p>
-              Plataforma de ensino de idiomas com foco em aprendizado interativo
-              e gamificado.
-            </p>
-            <div class="projeto-tech">
-              <span>PHP</span>
-              <span>JavaScript</span>
-              <span>MySQL</span>
-            </div>
+          <h1>Braian <span class="highlight">Gaspar da Rosa</span></h1>
+          <h2>Desenvolvedor Full Stack | PHP • Node.js • Flutter</h2>
+          <p>
+            +2 anos construindo soluções escaláveis e performáticas para indústrias e sistemas
+            críticos
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/BraianGaspar" target="_blank" rel="noopener noreferrer"
+              >GitHub</a
+            >
             <a
-              href="https://github.com/BraianGaspar/Beready_Projeto"
+              href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/"
               target="_blank"
-              class="btn-small"
-              >Ver no GitHub →</a
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a href="https://wa.me/5545988353553" target="_blank" rel="noopener noreferrer"
+              >WhatsApp</a
             >
           </div>
+          <a href="#contato" class="btn" data-key="hero_btn">Vamos codar juntos?</a>
+        </div>
+      </section>
 
-          <div class="projeto-card">
-            <div class="projeto-icon">🌡️❄️</div>
-            <h3>Efraim Ar-Condicionados</h3>
-            <p>
-              E-commerce completo para venda de ar-condicionados com gestão de
-              produtos e carrinho de compras.
-            </p>
-            <div class="projeto-tech">
-              <span>Next.js</span>
-              <span>TypeScript</span>
-              <span>Node.js</span>
-              <span>Tailwind</span>
+      <section id="sobre" class="sobre" aria-labelledby="sobre-title">
+        <div class="container">
+          <h2 id="sobre-title" data-key="about_title">Sobre Mim</h2>
+          <div class="sobre-content">
+            <div class="sobre-texto">
+              <p data-key="about_p1">
+                Sou desenvolvedor de software com foco em
+                <strong>back-end</strong>, mas sem medo de encarar o front e o mobile quando
+                necessário. Atualmente trabalho na <strong>Consilos Industrial</strong>, onde
+                mantenho e evoluo sistemas internos que rodam processos críticos da indústria.
+              </p>
+              <p data-key="about_p2">
+                Tenho experiência prática com
+                <strong>PHP, jQuery, MySQL e Oracle SQL</strong>, e venho estudando e aplicando
+                <strong>Node.js, NestJS, TypeScript e Vue.js</strong> para construir arquiteturas
+                mais modernas e performáticas. Também desenvolvo aplicações mobile com
+                <strong>Flutter</strong>.
+              </p>
+              <p data-key="about_p3">
+                Inglês avançado — consumo documentação técnica e conteúdo internacional sem
+                barreiras, além de colaborar em projetos globais.
+              </p>
+              <div class="info-rapida">
+                <div>
+                  <span aria-hidden="true">📍</span> <span data-key="location">Cascavel - PR</span>
+                </div>
+                <div>
+                  <span aria-hidden="true">📞</span> <span data-key="phone">(45) 98835-3553</span>
+                </div>
+                <div><span aria-hidden="true">🎂</span> <span data-key="age">19 anos</span></div>
+                <div><span aria-hidden="true">🚗</span> <span data-key="cnh">CNH B</span></div>
+                <div>
+                  <span aria-hidden="true">🌐</span> <span data-key="english">Inglês Avançado</span>
+                </div>
+              </div>
             </div>
-            <a
-              href="https://github.com/BraianGaspar/Efraim-ar-condicionado"
-              target="_blank"
-              class="btn-small"
-              >Ver no GitHub →</a
-            >
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contato" class="contato">
-      <div class="container">
-        <h2>Vamos construir algo incrível?</h2>
-        <div class="contato-content">
-          <div class="contato-info">
-            <p>📧 <strong>braian_gaspar@hotmail.com</strong></p>
-            <p>📱 <strong>(45) 98835-3553</strong></p>
-            <p>📍 <strong>Cascavel - PR</strong></p>
-            <p>
-              💼 Disponível para <strong>Home Office</strong> ou
-              <strong>Híbrido</strong>
-            </p>
-            <div class="social-links-footer">
-              <a href="https://github.com/BraianGaspar">GitHub</a>
+      <section id="habilidades" class="habilidades" aria-labelledby="skills-title">
+        <div class="container">
+          <h2 id="skills-title" data-key="skills_title">Stack Tecnológica</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3 data-key="backend">Back-end</h3>
+              <div class="skills">
+                <span>PHP</span>
+                <span>Node.js</span>
+                <span>NestJS</span>
+                <span>TypeScript</span>
+                <span>Java</span>
+                <span>APIs REST</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3 data-key="database">Banco de Dados</h3>
+              <div class="skills">
+                <span>MySQL</span>
+                <span>Oracle SQL</span>
+                <span data-key="modeling">Modelagem</span>
+                <span data-key="complex_queries">Consultas Complexas</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3 data-key="frontend_mobile">Front-end & Mobile</h3>
+              <div class="skills">
+                <span>jQuery</span>
+                <span>Vue.js</span>
+                <span>Next.js</span>
+                <span>Flutter</span>
+                <span>HTML/CSS</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3 data-key="tools">Ferramentas</h3>
+              <div class="skills">
+                <span>Git</span>
+                <span>Docker</span>
+                <span>Postman</span>
+                <span>Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiencia" class="experiencia" aria-labelledby="experience-title">
+        <div class="container">
+          <h2 id="experience-title" data-key="experience_title">Experiência Profissional</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date" data-key="exp_date">Dez 2024 — Atual</div>
+              <div class="timeline-content">
+                <h3 data-key="exp_job_title">Desenvolvedor PHP</h3>
+                <h4 data-key="exp_company">Consilos Industrial · Cascavel/PR</h4>
+                <ul>
+                  <li data-key="exp_item1">
+                    Desenvolvimento e manutenção de sistemas internos com PHP e jQuery
+                  </li>
+                  <li data-key="exp_item2">
+                    Implementação de funcionalidades estratégicas para o negócio
+                  </li>
+                  <li data-key="exp_item3">Otimização de performance de rotinas críticas</li>
+                  <li data-key="exp_item4">Manipulação e modelagem em MySQL e Oracle SQL</li>
+                  <li data-key="exp_item5">Correção de bugs e evolução contínua dos sistemas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="formacao">
+            <h3 data-key="education_title">🎓 Formação Acadêmica</h3>
+            <div class="timeline-item">
+              <div class="timeline-date" data-key="education_date">2024 — 2027</div>
+              <div class="timeline-content">
+                <h4 data-key="education_course">Engenharia de Software - 5º Período</h4>
+                <p data-key="education_institution">
+                  Faculdade Assis Gurgacz — Cascavel/PR (cursando)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="projetos" aria-labelledby="projects-title">
+        <div class="container">
+          <h2 id="projects-title" data-key="projects_title">Projetos em Destaque</h2>
+          <div class="projetos-grid">
+            <div class="projeto-card">
+              <div class="projeto-icon" aria-hidden="true">📚</div>
+              <h3 data-key="project1_title">BeReady</h3>
+              <p data-key="project1_desc">
+                Plataforma de ensino de idiomas com foco em aprendizado interativo e gamificado.
+              </p>
+              <div class="projeto-tech">
+                <span>PHP</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+              </div>
               <a
-                href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/"
-                >LinkedIn</a
+                href="https://github.com/BraianGaspar/Beready_Projeto"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-small"
+                data-key="view_github"
+                >Ver no GitHub →</a
               >
-              <a href="https://wa.me/5545988353553">WhatsApp</a>
+            </div>
+
+            <div class="projeto-card">
+              <div class="projeto-icon" aria-hidden="true">🌡️❄️</div>
+              <h3 data-key="project2_title">Efraim Ar-Condicionados</h3>
+              <p data-key="project2_desc">
+                E-commerce completo para venda de ar-condicionados com gestão de produtos e carrinho
+                de compras.
+              </p>
+              <div class="projeto-tech">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>Node.js</span>
+                <span>Tailwind</span>
+              </div>
+              <a
+                href="https://github.com/BraianGaspar/Efraim-ar-condicionado"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-small"
+                data-key="view_github"
+                >Ver no GitHub →</a
+              >
             </div>
           </div>
-          <form class="contato-form" id="contactForm">
-            <input type="text" id="assunto" placeholder="Assunto *" required />
-            <textarea
-              id="mensagem"
-              placeholder="Sua mensagem *"
-              rows="5"
-              required
-            ></textarea>
-            <button type="submit" class="btn" id="sendBtn">
-              Enviar mensagem ✨
-            </button>
-            <div id="formFeedback" class="feedback"></div>
-          </form>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="contato" class="contato" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 id="contact-title" data-key="contact_title">Vamos construir algo incrível?</h2>
+          <div class="contato-content">
+            <div class="contato-info">
+              <p>📧 <strong>braian_gaspar@hotmail.com</strong></p>
+              <p>📱 <strong>(45) 98835-3553</strong></p>
+              <p>📍 <strong data-key="location">Cascavel - PR</strong></p>
+              <p data-key="contact_availability">
+                💼 Disponível para <strong>Home Office</strong> ou
+                <strong>Híbrido</strong>
+              </p>
+              <div class="social-links-footer">
+                <a href="https://github.com/BraianGaspar" target="_blank" rel="noopener noreferrer"
+                  >GitHub</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+                <a href="https://wa.me/5545988353553" target="_blank" rel="noopener noreferrer"
+                  >WhatsApp</a
+                >
+              </div>
+            </div>
+            <form class="contato-form" id="contactForm">
+              <input
+                type="text"
+                id="assunto"
+                data-key="form_subject"
+                placeholder="Assunto *"
+                required
+                aria-label="Assunto da mensagem"
+              />
+              <textarea
+                id="mensagem"
+                data-key="form_message"
+                placeholder="Sua mensagem *"
+                rows="5"
+                required
+                aria-label="Conteúdo da mensagem"
+              ></textarea>
+              <button type="submit" class="btn" id="sendBtn" data-key="form_btn">
+                Enviar mensagem ✨
+              </button>
+              <div id="formFeedback" class="feedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <p>© 2025 Braian Gaspar da Rosa | Desenvolvedor Full Stack</p>
-      <p>Feito com ☕, 💻 e código limpo</p>
+      <p>
+        © 2025 Braian Gaspar da Rosa | <span data-key="footer_text">Desenvolvedor Full Stack</span>
+      </p>
+      <p data-key="footer_made">Feito com ☕, 💻 e código limpo</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

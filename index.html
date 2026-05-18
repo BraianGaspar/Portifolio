@@ -17,8 +17,120 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <!-- Preload de imagem crítica -->
     <link rel="preload" as="image" href="assets/perfil.png" />
+    <style>
+      /* ===== MELHORIAS NOS CARDS DE PROJETO ===== */
+      .projeto-card {
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .projeto-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #00d9ff, #0099cc);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: left;
+      }
+
+      .projeto-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .projeto-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .projeto-icon {
+        font-size: 2rem;
+        margin-bottom: 0;
+        flex-shrink: 0;
+      }
+
+      .projeto-card h3 {
+        margin-bottom: 0;
+        text-align: left;
+      }
+
+      .projeto-tagline {
+        font-size: 0.8rem;
+        color: #00d9ff;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+      }
+
+      .projeto-card p {
+        text-align: left;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .projeto-highlights {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .projeto-highlights li {
+        font-size: 0.85rem;
+        color: #555;
+        padding-left: 1.2rem;
+        position: relative;
+      }
+
+      .projeto-highlights li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #00d9ff;
+        font-size: 0.75rem;
+        top: 1px;
+      }
+
+      .projeto-tech {
+        justify-content: flex-start;
+      }
+
+      .projeto-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .projeto-status {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+
+      .status-active {
+        background: #d4edda;
+        color: #155724;
+      }
+
+      .status-wip {
+        background: #fff3cd;
+        color: #856404;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -58,23 +170,14 @@
           </div>
           <h1>Braian <span class="highlight">Gaspar da Rosa</span></h1>
           <h2>Desenvolvedor Full Stack | PHP • Node.js • Flutter</h2>
-          <p>
-            +2 anos construindo soluções escaláveis e performáticas para indústrias e sistemas
-            críticos
+          <p data-key="hero_description">
+            Desenvolvedor com experiência profissional em sistemas industriais críticos, construindo
+            soluções escaláveis com PHP, Vue.js, TypeScript e PostgreSQL.
           </p>
           <div class="social-links">
-            <a href="https://github.com/BraianGaspar" target="_blank" rel="noopener noreferrer"
-              >GitHub</a
-            >
-            <a
-              href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-            <a href="https://wa.me/5545988353553" target="_blank" rel="noopener noreferrer"
-              >WhatsApp</a
-            >
+            <a href="https://github.com/BraianGaspar" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://wa.me/5545988353553" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
           <a href="#contato" class="btn" data-key="hero_btn">Vamos codar juntos?</a>
         </div>
@@ -103,17 +206,11 @@
                 barreiras, além de colaborar em projetos globais.
               </p>
               <div class="info-rapida">
-                <div>
-                  <span aria-hidden="true">📍</span> <span data-key="location">Cascavel - PR</span>
-                </div>
-                <div>
-                  <span aria-hidden="true">📞</span> <span data-key="phone">(45) 98835-3553</span>
-                </div>
+                <div><span aria-hidden="true">📍</span> <span data-key="location">Cascavel - PR</span></div>
+                <div><span aria-hidden="true">📞</span> <span data-key="phone">(45) 98835-3553</span></div>
                 <div><span aria-hidden="true">🎂</span> <span data-key="age">19 anos</span></div>
                 <div><span aria-hidden="true">🚗</span> <span data-key="cnh">CNH B</span></div>
-                <div>
-                  <span aria-hidden="true">🌐</span> <span data-key="english">Inglês Avançado</span>
-                </div>
+                <div><span aria-hidden="true">🌐</span> <span data-key="english">Inglês Avançado</span></div>
               </div>
             </div>
           </div>
@@ -127,40 +224,29 @@
             <div class="skill-category">
               <h3 data-key="backend">Back-end</h3>
               <div class="skills">
-                <span>PHP</span>
-                <span>Node.js</span>
-                <span>NestJS</span>
-                <span>TypeScript</span>
-                <span>Java</span>
-                <span>APIs REST</span>
+                <span>PHP</span><span>Node.js</span><span>NestJS</span>
+                <span>TypeScript</span><span>Java</span><span>APIs REST</span>
               </div>
             </div>
             <div class="skill-category">
               <h3 data-key="database">Banco de Dados</h3>
               <div class="skills">
-                <span>MySQL</span>
-                <span>Oracle SQL</span>
-                <span data-key="modeling">Modelagem</span>
-                <span data-key="complex_queries">Consultas Complexas</span>
+                <span>MySQL</span><span>PostgreSQL</span><span>Oracle SQL</span>
+                <span data-key="modeling">Modelagem</span><span data-key="complex_queries">Consultas Complexas</span>
               </div>
             </div>
             <div class="skill-category">
               <h3 data-key="frontend_mobile">Front-end & Mobile</h3>
               <div class="skills">
-                <span>jQuery</span>
-                <span>Vue.js</span>
-                <span>Next.js</span>
-                <span>Flutter</span>
-                <span>HTML/CSS</span>
+                <span>Vue.js 3</span><span>Next.js</span><span>Flutter</span>
+                <span>Pinia</span><span>Tailwind CSS</span><span>HTML/CSS</span>
               </div>
             </div>
             <div class="skill-category">
               <h3 data-key="tools">Ferramentas</h3>
               <div class="skills">
-                <span>Git</span>
-                <span>Docker</span>
-                <span>Postman</span>
-                <span>Linux</span>
+                <span>Git</span><span>Docker</span><span>Postman</span>
+                <span>Linux</span><span>Supabase</span><span>Vite</span>
               </div>
             </div>
           </div>
@@ -177,12 +263,8 @@
                 <h3 data-key="exp_job_title">Desenvolvedor PHP</h3>
                 <h4 data-key="exp_company">Consilos Industrial · Cascavel/PR</h4>
                 <ul>
-                  <li data-key="exp_item1">
-                    Desenvolvimento e manutenção de sistemas internos com PHP e jQuery
-                  </li>
-                  <li data-key="exp_item2">
-                    Implementação de funcionalidades estratégicas para o negócio
-                  </li>
+                  <li data-key="exp_item1">Desenvolvimento e manutenção de sistemas internos com PHP e jQuery</li>
+                  <li data-key="exp_item2">Implementação de funcionalidades estratégicas para o negócio</li>
                   <li data-key="exp_item3">Otimização de performance de rotinas críticas</li>
                   <li data-key="exp_item4">Manipulação e modelagem em MySQL e Oracle SQL</li>
                   <li data-key="exp_item5">Correção de bugs e evolução contínua dos sistemas</li>
@@ -197,62 +279,89 @@
               <div class="timeline-date" data-key="education_date">2024 — 2027</div>
               <div class="timeline-content">
                 <h4 data-key="education_course">Engenharia de Software - 5º Período</h4>
-                <p data-key="education_institution">
-                  Faculdade Assis Gurgacz — Cascavel/PR (cursando)
-                </p>
+                <p data-key="education_institution">Faculdade Assis Gurgacz — Cascavel/PR (cursando)</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ===== SEÇÃO DE PROJETOS MELHORADA ===== -->
       <section id="projetos" class="projetos" aria-labelledby="projects-title">
         <div class="container">
           <h2 id="projects-title" data-key="projects_title">Projetos em Destaque</h2>
           <div class="projetos-grid">
+
+            <!-- BeReady -->
             <div class="projeto-card">
-              <div class="projeto-icon" aria-hidden="true">📚</div>
-              <h3 data-key="project1_title">BeReady</h3>
-              <p data-key="project1_desc">
-                Plataforma de ensino de idiomas com foco em aprendizado interativo e gamificado.
-              </p>
-              <div class="projeto-tech">
-                <span>PHP</span>
-                <span>JavaScript</span>
-                <span>MySQL</span>
+              <div class="projeto-header">
+                <div class="projeto-icon" aria-hidden="true">📚</div>
+                <h3 data-key="project1_title">BeReady</h3>
               </div>
-              <a
-                href="https://github.com/BraianGaspar/Beready_Projeto"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-small"
-                data-key="view_github"
-                >Ver no GitHub →</a
-              >
+              <p class="projeto-tagline" data-key="project1_tagline">Plataforma de aprendizado de inglês</p>
+              <p data-key="project1_desc">
+                Aplicação web full stack para aprendizado de inglês por contextualização visual,
+                com sistema de flashcards, quizzes interativos e painel administrativo com controle
+                de acesso por papéis (RBAC).
+              </p>
+              <ul class="projeto-highlights" data-key="project1_highlights">
+                <li>Autenticação JWT com Access + Refresh tokens</li>
+                <li>RBAC com painel de administradores</li>
+                <li>API REST em CakePHP 5 + PostgreSQL via Supabase</li>
+                <li>Frontend em Vue 3 + Pinia + TypeScript + Vite</li>
+                <li>Containerizado com Docker e docker-compose</li>
+              </ul>
+              <div class="projeto-tech">
+                <span>CakePHP 5</span><span>Vue 3</span><span>TypeScript</span>
+                <span>PostgreSQL</span><span>Docker</span><span>JWT</span>
+              </div>
+              <div class="projeto-footer">
+                <span class="projeto-status status-active" data-key="project1_status">✅ Em desenvolvimento</span>
+                <a
+                  href="https://github.com/BraianGaspar/Beready_Projeto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-small"
+                  data-key="view_github"
+                >Ver no GitHub →</a>
+              </div>
             </div>
 
+            <!-- Efraim Ar-Condicionados -->
             <div class="projeto-card">
-              <div class="projeto-icon" aria-hidden="true">🌡️❄️</div>
-              <h3 data-key="project2_title">Efraim Ar-Condicionados</h3>
-              <p data-key="project2_desc">
-                E-commerce completo para venda de ar-condicionados com gestão de produtos e carrinho
-                de compras.
-              </p>
-              <div class="projeto-tech">
-                <span>Next.js</span>
-                <span>TypeScript</span>
-                <span>Node.js</span>
-                <span>Tailwind</span>
+              <div class="projeto-header">
+                <div class="projeto-icon" aria-hidden="true">🌡️❄️</div>
+                <h3 data-key="project2_title">Efraim Ar-Condicionados</h3>
               </div>
-              <a
-                href="https://github.com/BraianGaspar/Efraim-ar-condicionado"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-small"
-                data-key="view_github"
-                >Ver no GitHub →</a
-              >
+              <p class="projeto-tagline" data-key="project2_tagline">E-commerce completo</p>
+              <p data-key="project2_desc">
+                E-commerce moderno para venda de ar-condicionados, com catálogo de produtos,
+                carrinho de compras, gestão de estoque e interface responsiva otimizada para
+                conversão.
+              </p>
+              <ul class="projeto-highlights" data-key="project2_highlights">
+                <li>Interface moderna com Next.js 14 + App Router</li>
+                <li>Tipagem end-to-end com TypeScript</li>
+                <li>Estilização com Tailwind CSS</li>
+                <li>Backend em Node.js com API REST</li>
+                <li>Layout 100% responsivo e mobile-first</li>
+              </ul>
+              <div class="projeto-tech">
+                <span>Next.js</span><span>TypeScript</span><span>Node.js</span>
+                <span>Tailwind CSS</span>
+              </div>
+              <div class="projeto-footer">
+                <span class="projeto-status status-wip" data-key="project2_status">🔧 Em progresso</span>
+                <a
+                  href="https://github.com/BraianGaspar/Efraim-ar-condicionado"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-small"
+                  data-key="view_github"
+                >Ver no GitHub →</a>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -266,44 +375,18 @@
               <p>📱 <strong>(45) 98835-3553</strong></p>
               <p>📍 <strong data-key="location">Cascavel - PR</strong></p>
               <p data-key="contact_availability">
-                💼 Disponível para <strong>Home Office</strong> ou
-                <strong>Híbrido</strong>
+                💼 Disponível para <strong>Home Office</strong> ou <strong>Híbrido</strong>
               </p>
               <div class="social-links-footer">
-                <a href="https://github.com/BraianGaspar" target="_blank" rel="noopener noreferrer"
-                  >GitHub</a
-                >
-                <a
-                  href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn</a
-                >
-                <a href="https://wa.me/5545988353553" target="_blank" rel="noopener noreferrer"
-                  >WhatsApp</a
-                >
+                <a href="https://github.com/BraianGaspar" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/braian-gaspar-da-rosa-b18bb7217/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://wa.me/5545988353553" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </div>
             </div>
             <form class="contato-form" id="contactForm">
-              <input
-                type="text"
-                id="assunto"
-                data-key="form_subject"
-                placeholder="Assunto *"
-                required
-                aria-label="Assunto da mensagem"
-              />
-              <textarea
-                id="mensagem"
-                data-key="form_message"
-                placeholder="Sua mensagem *"
-                rows="5"
-                required
-                aria-label="Conteúdo da mensagem"
-              ></textarea>
-              <button type="submit" class="btn" id="sendBtn" data-key="form_btn">
-                Enviar mensagem ✨
-              </button>
+              <input type="text" id="assunto" data-key="form_subject" placeholder="Assunto *" required aria-label="Assunto da mensagem" />
+              <textarea id="mensagem" data-key="form_message" placeholder="Sua mensagem *" rows="5" required aria-label="Conteúdo da mensagem"></textarea>
+              <button type="submit" class="btn" id="sendBtn" data-key="form_btn">Enviar mensagem ✨</button>
               <div id="formFeedback" class="feedback" role="status" aria-live="polite"></div>
             </form>
           </div>
@@ -312,9 +395,7 @@
     </main>
 
     <footer>
-      <p>
-        © 2025 Braian Gaspar da Rosa | <span data-key="footer_text">Desenvolvedor Full Stack</span>
-      </p>
+      <p>© 2025 Braian Gaspar da Rosa | <span data-key="footer_text">Desenvolvedor Full Stack</span></p>
       <p data-key="footer_made">Feito com ☕, 💻 e código limpo</p>
     </footer>
 

@@ -1,4 +1,4 @@
-// ========== TRADUÇÃO PT/EN ==========
+// ========== TRADUÇÃO PT/EN/ES ==========
 const translations = {
   pt: {
     nav_home: 'Início',
@@ -7,18 +7,20 @@ const translations = {
     nav_experiencia: 'Experiência',
     nav_projetos: 'Projetos',
     nav_contato: 'Contato',
-    hero_title: 'Braian Gaspar da Rosa',
-    hero_subtitle: 'Desenvolvedor Full Stack | PHP • Node.js • Flutter',
+    hero_title:
+      'Braian <span class="highlight">Gaspar da Rosa</span>',
+    hero_subtitle:
+      'Desenvolvedor Full Stack & Automação com IA<span class="hero-stack">Python • Node.js • NestJS • Next.js • TypeScript • JavaScript • PHP</span>',
     hero_description:
-      '+2 anos construindo soluções escaláveis e performáticas para indústrias e sistemas críticos',
+      'Quase 2 anos construindo soluções, integrações entre sistemas e automações com Inteligência Artificial',
     hero_btn: 'Vamos codar juntos?',
     about_title: 'Sobre Mim',
     about_p1:
-      'Sou desenvolvedor de software com foco em <strong>back-end</strong>, mas sem medo de encarar o front e o mobile quando necessário. Atualmente trabalho na <strong>Consilos Industrial</strong>, onde mantenho e evoluo sistemas internos que rodam processos críticos da indústria.',
+      'Sou desenvolvedor full stack com foco em <strong>back-end</strong> e gosto de transformar processos manuais e repetitivos em soluções automatizadas. Busco entender o problema de ponta a ponta, dos dados e APIs até a interface, para construir sistemas organizados, performáticos e fáceis de manter.',
     about_p2:
-      'Tenho experiência prática com <strong>PHP, jQuery, MySQL e Oracle SQL</strong>, e venho estudando e aplicando <strong>Node.js, NestJS, TypeScript e Vue.js</strong> para construir arquiteturas mais modernas e performáticas. Também desenvolvo aplicações mobile com <strong>Flutter</strong>.',
+      'Hoje meu foco está em <strong>Inteligência Artificial e automação</strong>: conecto sistemas, APIs e ferramentas de IA usando <strong>Python, Node.js, NestJS, Next.js, TypeScript e JavaScript</strong>, com <strong>PostgreSQL e MySQL</strong> na camada de dados. Também tenho base sólida em <strong>PHP</strong> e desenvolvo com <strong>Vue.js</strong> e <strong>Flutter</strong>.',
     about_p3:
-      'Inglês avançado — consumo documentação técnica e conteúdo internacional sem barreiras, além de colaborar em projetos globais.',
+      'Curso Engenharia de Software e estou sempre estudando algo novo. Tenho inglês avançado, o que me permite consumir documentação técnica e conteúdo internacional sem barreiras e colaborar em projetos globais.',
     location: 'Cascavel - PR',
     phone: '(45) 98835-3553',
     age: '19 anos',
@@ -29,7 +31,22 @@ const translations = {
     database: 'Banco de Dados',
     frontend_mobile: 'Front-end & Mobile',
     tools: 'Ferramentas',
+    modeling: 'Modelagem',
+    complex_queries: 'Consultas Complexas',
+    ai_automation: 'IA & Automação',
+    ai_integrations: 'Integrações com IA',
+    process_automation: 'Automação de Processos',
+    systems_integration: 'Integração de Sistemas',
     experience_title: 'Experiência Profissional',
+    exp2_date: 'Jun 2026 — Atual',
+    exp2_job_title: 'Assistente de Automação e IA Júnior',
+    exp2_company: 'Alfama Foods · Cascavel/PR',
+    exp2_item1: 'Desenvolvimento de soluções de Inteligência Artificial para processos internos',
+    exp2_item2: 'Automação de processos com Python, Node.js e OpenClaw',
+    exp2_item3: 'Integrações entre sistemas corporativos, APIs e ferramentas de IA',
+    exp2_item4: 'Aplicações e serviços com Next.js, NestJS e TypeScript',
+    exp2_item5: 'Modelagem e consultas em PostgreSQL e MySQL',
+    exp_date: 'Dez 2024 — Jun 2026',
     exp_job_title: 'Desenvolvedor PHP',
     exp_company: 'Consilos Industrial · Cascavel/PR',
     exp_item1: 'Desenvolvimento e manutenção de sistemas internos com PHP e jQuery',
@@ -38,15 +55,32 @@ const translations = {
     exp_item4: 'Manipulação e modelagem em MySQL e Oracle SQL',
     exp_item5: 'Correção de bugs e evolução contínua dos sistemas',
     education_title: '🎓 Formação Acadêmica',
-    education_course: 'Engenharia de Software - 5º Período',
+    education_course: 'Engenharia de Software - 6º Período',
     education_institution: 'Faculdade Assis Gurgacz — Cascavel/PR (cursando)',
     projects_title: 'Projetos em Destaque',
     project1_title: 'BeReady',
+    project1_tagline: 'Plataforma de aprendizado de inglês',
     project1_desc:
-      'Plataforma de ensino de idiomas com foco em aprendizado interativo e gamificado.',
+      'Aplicação web full stack para aprendizado de inglês por contextualização visual: o aluno cria prompts que viram traduções, imagens e frases semelhantes, estuda com flashcards e quizzes e acompanha sua evolução em um dashboard de progresso.',
+    project1_highlights:
+      '<li>Autenticação JWT (Access + Refresh) com recuperação de senha por e-mail</li>' +
+      '<li>RBAC com painel administrativo, gestão de papéis e estatísticas</li>' +
+      '<li>API REST em CakePHP 5 com camadas de Services e Repositories</li>' +
+      '<li>Rate limiting, upload de imagens no Cloudinary e monitoramento com Sentry</li>' +
+      '<li>Frontend modular em Vue 3 + Pinia + TypeScript + Vite + Tailwind</li>' +
+      '<li>Docker Compose e CI com PHPUnit, PHPStan e PHPCS</li>',
+    project1_status: '✅ Em desenvolvimento',
     project2_title: 'Efraim Ar-Condicionados',
+    project2_tagline: 'E-commerce completo',
     project2_desc:
-      'E-commerce completo para venda de ar-condicionados com gestão de produtos e carrinho de compras.',
+      'E-commerce moderno para venda de ar-condicionados, com catálogo de produtos, carrinho de compras, gestão de estoque e interface responsiva otimizada para conversão.',
+    project2_highlights:
+      '<li>Interface moderna com Next.js 14 + App Router</li>' +
+      '<li>Tipagem end-to-end com TypeScript</li>' +
+      '<li>Estilização com Tailwind CSS</li>' +
+      '<li>Backend em Node.js com API REST</li>' +
+      '<li>Layout 100% responsivo e mobile-first</li>',
+    project2_status: '🔧 Em progresso',
     view_github: 'Ver no GitHub →',
     contact_title: 'Vamos construir algo incrível?',
     contact_email_label: '📧',
@@ -73,18 +107,20 @@ const translations = {
     nav_experiencia: 'Experience',
     nav_projetos: 'Projects',
     nav_contato: 'Contact',
-    hero_title: 'Braian Gaspar da Rosa',
-    hero_subtitle: 'Full Stack Developer | PHP • Node.js • Flutter',
+    hero_title:
+      'Braian <span class="highlight">Gaspar da Rosa</span>',
+    hero_subtitle:
+      'Full Stack Developer & AI Automation<span class="hero-stack">Python • Node.js • NestJS • Next.js • TypeScript • JavaScript • PHP</span>',
     hero_description:
-      '+2 years building scalable and high-performance solutions for industries and critical systems',
+      'Nearly 2 years building solutions, system integrations and AI-powered automations',
     hero_btn: "Let's code together?",
     about_title: 'About Me',
     about_p1:
-      "I'm a software developer focused on <strong>back-end</strong>, but not afraid to tackle front-end and mobile when needed. Currently working at <strong>Consilos Industrial</strong>, where I maintain and evolve internal systems that run critical industrial processes.",
+      "I'm a full stack developer focused on <strong>back-end</strong>, and I enjoy turning manual, repetitive processes into automated solutions. I like understanding problems end to end, from data and APIs to the interface, to build systems that are well organized, performant and easy to maintain.",
     about_p2:
-      "I have practical experience with <strong>PHP, jQuery, MySQL and Oracle SQL</strong>, and I've been studying and applying <strong>Node.js, NestJS, TypeScript and Vue.js</strong> to build more modern and performant architectures. I also develop mobile applications with <strong>Flutter</strong>.",
+      'My current focus is <strong>Artificial Intelligence and automation</strong>: I connect systems, APIs and AI tools using <strong>Python, Node.js, NestJS, Next.js, TypeScript and JavaScript</strong>, with <strong>PostgreSQL and MySQL</strong> on the data layer. I also have a solid background in <strong>PHP</strong> and build with <strong>Vue.js</strong> and <strong>Flutter</strong>.',
     about_p3:
-      'Advanced English — I consume technical documentation and international content without barriers, and collaborate on global projects.',
+      "I'm studying Software Engineering and always learning something new. My English is advanced, so I consume technical documentation and international content without barriers and collaborate on global projects.",
     location: 'Cascavel - PR, Brazil',
     phone: '+55 (45) 98835-3553',
     age: '19 years old',
@@ -95,7 +131,22 @@ const translations = {
     database: 'Database',
     frontend_mobile: 'Front-end & Mobile',
     tools: 'Tools',
+    modeling: 'Data Modeling',
+    complex_queries: 'Complex Queries',
+    ai_automation: 'AI & Automation',
+    ai_integrations: 'AI Integrations',
+    process_automation: 'Process Automation',
+    systems_integration: 'Systems Integration',
     experience_title: 'Professional Experience',
+    exp2_date: 'Jun 2026 — Present',
+    exp2_job_title: 'Junior Automation & AI Assistant',
+    exp2_company: 'Alfama Foods · Cascavel/PR',
+    exp2_item1: 'Development of Artificial Intelligence solutions for internal processes',
+    exp2_item2: 'Process automation with Python, Node.js and OpenClaw',
+    exp2_item3: 'Integrations between corporate systems, APIs and AI tools',
+    exp2_item4: 'Applications and services with Next.js, NestJS and TypeScript',
+    exp2_item5: 'Data modeling and queries in PostgreSQL and MySQL',
+    exp_date: 'Dec 2024 — Jun 2026',
     exp_job_title: 'PHP Developer',
     exp_company: 'Consilos Industrial · Cascavel/PR, Brazil',
     exp_item1: 'Development and maintenance of internal systems with PHP and jQuery',
@@ -104,14 +155,32 @@ const translations = {
     exp_item4: 'Data manipulation and modeling in MySQL and Oracle SQL',
     exp_item5: 'Bug fixing and continuous system evolution',
     education_title: '🎓 Education',
-    education_course: 'Software Engineering - 5th Semester',
+    education_course: 'Software Engineering - 6th Semester',
     education_institution: 'Assis Gurgacz University — Cascavel/PR (ongoing)',
     projects_title: 'Featured Projects',
     project1_title: 'BeReady',
-    project1_desc: 'Language teaching platform focused on interactive and gamified learning.',
+    project1_tagline: 'English learning platform',
+    project1_desc:
+      'Full stack web app for learning English through visual context: students create prompts that become translations, images and similar phrases, study with flashcards and quizzes, and track their evolution on a progress dashboard.',
+    project1_highlights:
+      '<li>JWT authentication (Access + Refresh) with email password recovery</li>' +
+      '<li>RBAC with admin panel, role management and statistics</li>' +
+      '<li>REST API in CakePHP 5 with Services and Repositories layers</li>' +
+      '<li>Rate limiting, Cloudinary image uploads and Sentry monitoring</li>' +
+      '<li>Modular frontend in Vue 3 + Pinia + TypeScript + Vite + Tailwind</li>' +
+      '<li>Docker Compose and CI with PHPUnit, PHPStan and PHPCS</li>',
+    project1_status: '✅ In development',
     project2_title: 'Efraim Air Conditioners',
+    project2_tagline: 'Complete e-commerce',
     project2_desc:
-      'Complete e-commerce for selling air conditioners with product management and shopping cart.',
+      'Modern e-commerce for selling air conditioners, with product catalog, shopping cart, inventory management and a responsive interface optimized for conversion.',
+    project2_highlights:
+      '<li>Modern interface with Next.js 14 + App Router</li>' +
+      '<li>End-to-end typing with TypeScript</li>' +
+      '<li>Styling with Tailwind CSS</li>' +
+      '<li>Node.js backend with REST API</li>' +
+      '<li>100% responsive, mobile-first layout</li>',
+    project2_status: '🔧 In progress',
     view_github: 'View on GitHub →',
     contact_title: "Let's build something amazing?",
     contact_email_label: '📧',
@@ -130,6 +199,106 @@ const translations = {
       '❌ Error sending. You can contact me directly on WhatsApp: +55 (45) 98835-3553',
     footer_text: 'Full Stack Developer',
     footer_made: 'Made with ☕, 💻 and clean code',
+  },
+  es: {
+    nav_home: 'Inicio',
+    nav_sobre: 'Sobre mí',
+    nav_habilidades: 'Habilidades',
+    nav_experiencia: 'Experiencia',
+    nav_projetos: 'Proyectos',
+    nav_contato: 'Contacto',
+    hero_title:
+      'Braian <span class="highlight">Gaspar da Rosa</span>',
+    hero_subtitle:
+      'Desarrollador Full Stack & Automatización con IA<span class="hero-stack">Python • Node.js • NestJS • Next.js • TypeScript • JavaScript • PHP</span>',
+    hero_description:
+      'Casi 2 años construyendo soluciones, integraciones entre sistemas y automatizaciones con Inteligencia Artificial',
+    hero_btn: '¿Programamos juntos?',
+    about_title: 'Sobre Mí',
+    about_p1:
+      'Soy desarrollador full stack con enfoque en <strong>back-end</strong> y me gusta transformar procesos manuales y repetitivos en soluciones automatizadas. Busco entender el problema de punta a punta, desde los datos y las APIs hasta la interfaz, para construir sistemas organizados, eficientes y fáciles de mantener.',
+    about_p2:
+      'Hoy mi enfoque está en la <strong>Inteligencia Artificial y la automatización</strong>: conecto sistemas, APIs y herramientas de IA usando <strong>Python, Node.js, NestJS, Next.js, TypeScript y JavaScript</strong>, con <strong>PostgreSQL y MySQL</strong> en la capa de datos. También tengo una base sólida en <strong>PHP</strong> y desarrollo con <strong>Vue.js</strong> y <strong>Flutter</strong>.',
+    about_p3:
+      'Estudio Ingeniería de Software y siempre estoy aprendiendo algo nuevo. Tengo inglés avanzado, lo que me permite consumir documentación técnica y contenido internacional sin barreras y colaborar en proyectos globales.',
+    location: 'Cascavel - PR, Brasil',
+    phone: '+55 (45) 98835-3553',
+    age: '19 años',
+    cnh: 'Licencia de conducir B',
+    english: 'Inglés Avanzado',
+    skills_title: 'Stack Tecnológico',
+    backend: 'Back-end',
+    database: 'Base de Datos',
+    frontend_mobile: 'Front-end & Mobile',
+    tools: 'Herramientas',
+    modeling: 'Modelado de Datos',
+    complex_queries: 'Consultas Complejas',
+    ai_automation: 'IA & Automatización',
+    ai_integrations: 'Integraciones con IA',
+    process_automation: 'Automatización de Procesos',
+    systems_integration: 'Integración de Sistemas',
+    experience_title: 'Experiencia Profesional',
+    exp2_date: 'Jun 2026 — Actual',
+    exp2_job_title: 'Asistente Junior de Automatización e IA',
+    exp2_company: 'Alfama Foods · Cascavel/PR, Brasil',
+    exp2_item1: 'Desarrollo de soluciones de Inteligencia Artificial para procesos internos',
+    exp2_item2: 'Automatización de procesos con Python, Node.js y OpenClaw',
+    exp2_item3: 'Integraciones entre sistemas corporativos, APIs y herramientas de IA',
+    exp2_item4: 'Aplicaciones y servicios con Next.js, NestJS y TypeScript',
+    exp2_item5: 'Modelado y consultas en PostgreSQL y MySQL',
+    exp_date: 'Dic 2024 — Jun 2026',
+    exp_job_title: 'Desarrollador PHP',
+    exp_company: 'Consilos Industrial · Cascavel/PR, Brasil',
+    exp_item1: 'Desarrollo y mantenimiento de sistemas internos con PHP y jQuery',
+    exp_item2: 'Implementación de funcionalidades estratégicas para el negocio',
+    exp_item3: 'Optimización del rendimiento de rutinas críticas',
+    exp_item4: 'Manipulación y modelado de datos en MySQL y Oracle SQL',
+    exp_item5: 'Corrección de errores y evolución continua de los sistemas',
+    education_title: '🎓 Formación Académica',
+    education_course: 'Ingeniería de Software - 6º Semestre',
+    education_institution: 'Facultad Assis Gurgacz — Cascavel/PR (en curso)',
+    projects_title: 'Proyectos Destacados',
+    project1_title: 'BeReady',
+    project1_tagline: 'Plataforma de aprendizaje de inglés',
+    project1_desc:
+      'Aplicación web full stack para aprender inglés mediante contextualización visual: el alumno crea prompts que se convierten en traducciones, imágenes y frases similares, estudia con flashcards y quizzes y sigue su evolución en un panel de progreso.',
+    project1_highlights:
+      '<li>Autenticación JWT (Access + Refresh) con recuperación de contraseña por correo</li>' +
+      '<li>RBAC con panel administrativo, gestión de roles y estadísticas</li>' +
+      '<li>API REST en CakePHP 5 con capas de Services y Repositories</li>' +
+      '<li>Rate limiting, carga de imágenes en Cloudinary y monitoreo con Sentry</li>' +
+      '<li>Frontend modular en Vue 3 + Pinia + TypeScript + Vite + Tailwind</li>' +
+      '<li>Docker Compose y CI con PHPUnit, PHPStan y PHPCS</li>',
+    project1_status: '✅ En desarrollo',
+    project2_title: 'Efraim Aires Acondicionados',
+    project2_tagline: 'E-commerce completo',
+    project2_desc:
+      'E-commerce moderno para la venta de aires acondicionados, con catálogo de productos, carrito de compras, gestión de inventario e interfaz responsiva optimizada para la conversión.',
+    project2_highlights:
+      '<li>Interfaz moderna con Next.js 14 + App Router</li>' +
+      '<li>Tipado end-to-end con TypeScript</li>' +
+      '<li>Estilos con Tailwind CSS</li>' +
+      '<li>Backend en Node.js con API REST</li>' +
+      '<li>Diseño 100% responsivo y mobile-first</li>',
+    project2_status: '🔧 En progreso',
+    view_github: 'Ver en GitHub →',
+    contact_title: '¿Construimos algo increíble?',
+    contact_email_label: '📧',
+    contact_phone_label: '📱',
+    contact_location_label: '📍',
+    contact_availability:
+      '💼 Disponible para trabajo <strong>Remoto</strong> o <strong>Híbrido</strong>',
+    form_subject: 'Asunto *',
+    form_message: 'Tu mensaje *',
+    form_btn: 'Enviar mensaje ✨',
+    form_sending: 'Enviando... 📨',
+    form_success: '✅ ¡Mensaje listo! Se abrirá WhatsApp para que lo envíes.',
+    form_error: '❌ Por favor, escribe un asunto.',
+    form_error_msg: '❌ Por favor, escribe tu mensaje.',
+    form_error_whatsapp:
+      '❌ Error al enviar. Puedes contactarme directamente por WhatsApp: +55 (45) 98835-3553',
+    footer_text: 'Desarrollador Full Stack',
+    footer_made: 'Hecho con ☕, 💻 y código limpio',
   },
 };
 
@@ -151,19 +320,13 @@ function updateLanguage() {
     }
   });
 
-  // Atualizar texto do botão de idioma
-  const langBtn = document.getElementById('languageBtn');
-  if (langBtn) {
-    const ptSpan = langBtn.querySelector('.lang-text:first-child');
-    const enSpan = langBtn.querySelector('.lang-text:last-child');
-    if (currentLang === 'pt') {
-      ptSpan.classList.remove('hidden');
-      enSpan.classList.add('hidden');
-    } else {
-      ptSpan.classList.add('hidden');
-      enSpan.classList.remove('hidden');
-    }
-  }
+  // Marcar idioma ativo no seletor
+  document.querySelectorAll('.lang-option').forEach((btn) => {
+    const active = btn.dataset.lang === currentLang;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  document.documentElement.lang = { pt: 'pt-br', en: 'en', es: 'es' }[currentLang];
 
   // Atualizar textos especiais
   updateSpecialTexts();
@@ -213,32 +376,43 @@ const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 
 if (mobileMenuBtn && navMenu) {
+  const setMenuOpen = (open) => {
+    navMenu.classList.toggle('active', open);
+    mobileMenuBtn.textContent = open ? '✕' : '☰';
+    mobileMenuBtn.setAttribute('aria-expanded', String(open));
+  };
+
   mobileMenuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+    setMenuOpen(!navMenu.classList.contains('active'));
   });
 
   navMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      mobileMenuBtn.textContent = '☰';
-    });
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  // Fecha o menu ao voltar para o layout desktop
+  window.matchMedia('(min-width: 961px)').addEventListener('change', (e) => {
+    if (e.matches) setMenuOpen(false);
   });
 }
 
-// ========== BOTÃO DE IDIOMA ==========
-const langBtn = document.getElementById('languageBtn');
-if (langBtn) {
-  langBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'pt' ? 'en' : 'pt';
+// ========== SELETOR DE IDIOMA ==========
+document.querySelectorAll('.lang-option').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    currentLang = btn.dataset.lang;
     updateLanguage();
-    localStorage.setItem('preferred_language', currentLang);
+    try {
+      localStorage.setItem('preferred_language', currentLang);
+    } catch (e) {}
   });
-}
+});
 
 // Carregar idioma salvo
-const savedLang = localStorage.getItem('preferred_language');
-if (savedLang && (savedLang === 'pt' || savedLang === 'en')) {
+let savedLang = null;
+try {
+  savedLang = localStorage.getItem('preferred_language');
+} catch (e) {}
+if (savedLang && translations[savedLang]) {
   currentLang = savedLang;
   updateLanguage();
 }

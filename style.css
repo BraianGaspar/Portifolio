@@ -44,25 +44,40 @@ nav {
   gap: 1rem;
 }
 
-.lang-btn {
-  background: linear-gradient(135deg, #00d9ff, #0099cc);
+.lang-switch {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  border-radius: 30px;
+}
+
+.lang-option {
+  background: none;
   border: none;
-  padding: 0.5rem 1.2rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 30px;
   cursor: pointer;
+  font-family: inherit;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  color: #e0e0e0;
   transition: all 0.3s;
+}
+
+.lang-option:hover {
+  color: #00d9ff;
+}
+
+.lang-option.active {
+  background: linear-gradient(135deg, #00d9ff, #0099cc);
   color: #0f0f1f;
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.4);
 }
 
-.lang-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
-}
-
-.lang-text.hidden {
-  display: none;
+.lang-option:focus-visible {
+  outline: 2px solid #00d9ff;
+  outline-offset: 2px;
 }
 
 .mobile-menu-btn {
@@ -522,56 +537,134 @@ footer p:first-child {
 
 /* ========== RESPONSIVIDADE ========== */
 
-@media (max-width: 768px) {
+html {
+  scroll-padding-top: 80px;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.nav-menu {
+  order: 1;
+}
+
+.nav-controls {
+  order: 2;
+}
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw + 0.8rem, 3rem);
+  line-height: 1.2;
+}
+
+.hero h2 {
+  font-size: clamp(1rem, 1.5vw + 0.6rem, 1.5rem);
+}
+
+.hero-stack {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.75em;
+  color: #00d9ff;
+  letter-spacing: 0.02em;
+}
+
+.hero p {
+  font-size: clamp(0.95rem, 0.5vw + 0.85rem, 1.1rem);
+}
+
+section h2 {
+  font-size: clamp(1.7rem, 3vw + 0.8rem, 2.5rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}
+
+.projetos-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+
+.info-rapida {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+
+.contato-info,
+.timeline-content,
+.projeto-card {
+  overflow-wrap: anywhere;
+}
+
+/* Efeitos de hover só em dispositivos com mouse */
+@media (hover: none) {
+  .skill-category:hover,
+  .projeto-card:hover,
+  .timeline-content:hover,
+  .skills span:hover,
+  .social-links a:hover,
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* Tablets e telas médias: menu vira hambúrguer antes de quebrar em duas linhas */
+@media (max-width: 960px) {
   .mobile-menu-btn {
     display: block;
   }
 
   .nav-menu {
+    order: 3;
     display: none;
     width: 100%;
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 0.25rem;
+    padding: 0.5rem 0 1rem;
   }
 
   .nav-menu.active {
     display: flex;
   }
 
-  nav {
-    padding: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero h2 {
-    font-size: 1rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .container {
-    padding: 3rem 1rem;
-  }
-
-  section h2 {
-    font-size: 2rem;
-  }
-
-  .skills-grid,
-  .projetos-grid {
-    grid-template-columns: 1fr;
+  .nav-menu a {
+    display: block;
+    padding: 0.6rem 0;
   }
 
   .contato-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .container {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .hero-content {
+    padding: 2rem 1.25rem;
   }
 
   .timeline-item {
@@ -579,25 +672,78 @@ footer p:first-child {
     gap: 0.5rem;
   }
 
-  .info-rapida {
-    grid-template-columns: 1fr;
+  .timeline-date {
+    min-width: 0;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+  }
+
+  .timeline-content ul {
+    padding-left: 1.1rem;
+  }
+
+  .projeto-card {
+    padding: 1.5rem;
+  }
+
+  .sobre-texto p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .profile-img {
-    width: 150px;
-    height: 150px;
+  .logo {
+    font-size: 1.1rem;
   }
 
-  .hero h1 {
-    font-size: 1.5rem;
+  .lang-option {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.75rem;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.5rem;
+  }
+
+  .container {
+    padding: 3rem 1rem;
+  }
+
+  .social-links {
+    gap: 0.6rem;
+  }
+
+  .social-links a {
+    padding: 0.45rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .skill-category,
+  .projeto-card {
+    padding: 1.25rem;
+  }
+
+  .info-rapida {
+    padding: 1rem;
+  }
+
+  .projeto-footer .btn-small {
+    width: 100%;
+    text-align: center;
   }
 
   .btn,
   .btn-small {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .contato-form .btn {
+    width: 100%;
   }
 }
 

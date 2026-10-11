@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de Braian Gaspar - Desenvolvedor PHP, Node.js, Flutter com inglês avançado"
+      content="Portfólio de Braian Gaspar - Desenvolvedor Full Stack, Automação e IA com Node.js, Python e PHP, inglês avançado"
     />
     <meta name="theme-color" content="#0f0f1f" />
     <meta name="author" content="Braian Gaspar da Rosa" />
@@ -137,10 +137,11 @@
       <nav aria-label="Navegação principal">
         <div class="logo" aria-label="Logo">{ Braian Gaspar }</div>
         <div class="nav-controls">
-          <button id="languageBtn" class="lang-btn" aria-label="Trocar idioma / Switch language">
-            <span class="lang-text">🇧🇷 PT</span>
-            <span class="lang-text hidden">🇺🇸 EN</span>
-          </button>
+          <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button type="button" class="lang-option active" data-lang="pt" aria-pressed="true" title="Português">PT</button>
+            <button type="button" class="lang-option" data-lang="en" aria-pressed="false" title="English">EN</button>
+            <button type="button" class="lang-option" data-lang="es" aria-pressed="false" title="Español">ES</button>
+          </div>
           <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
         </div>
         <ul class="nav-menu" role="list">
@@ -168,11 +169,10 @@
               onerror="this.src = 'https://via.placeholder.com/200?text=Braian'"
             />
           </div>
-          <h1>Braian <span class="highlight">Gaspar da Rosa</span></h1>
-          <h2>Desenvolvedor Full Stack | PHP • Node.js • Flutter</h2>
+          <h1 data-key="hero_title">Braian <span class="highlight">Gaspar da Rosa</span></h1>
+          <h2 data-key="hero_subtitle">Desenvolvedor Full Stack & Automação com IA<span class="hero-stack">Python • Node.js • NestJS • Next.js • TypeScript • JavaScript • PHP</span></h2>
           <p data-key="hero_description">
-            Desenvolvedor com experiência profissional em sistemas industriais críticos, construindo
-            soluções escaláveis com PHP, Vue.js, TypeScript e PostgreSQL.
+            Quase 2 anos construindo soluções, integrações entre sistemas e automações com Inteligência Artificial
           </p>
           <div class="social-links">
             <a href="https://github.com/BraianGaspar" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -189,21 +189,13 @@
           <div class="sobre-content">
             <div class="sobre-texto">
               <p data-key="about_p1">
-                Sou desenvolvedor de software com foco em
-                <strong>back-end</strong>, mas sem medo de encarar o front e o mobile quando
-                necessário. Atualmente trabalho na <strong>Consilos Industrial</strong>, onde
-                mantenho e evoluo sistemas internos que rodam processos críticos da indústria.
+                Sou desenvolvedor full stack com foco em <strong>back-end</strong> e gosto de transformar processos manuais e repetitivos em soluções automatizadas. Busco entender o problema de ponta a ponta, dos dados e APIs até a interface, para construir sistemas organizados, performáticos e fáceis de manter.
               </p>
               <p data-key="about_p2">
-                Tenho experiência prática com
-                <strong>PHP, jQuery, MySQL e Oracle SQL</strong>, e venho estudando e aplicando
-                <strong>Node.js, NestJS, TypeScript e Vue.js</strong> para construir arquiteturas
-                mais modernas e performáticas. Também desenvolvo aplicações mobile com
-                <strong>Flutter</strong>.
+                Hoje meu foco está em <strong>Inteligência Artificial e automação</strong>: conecto sistemas, APIs e ferramentas de IA usando <strong>Python, Node.js, NestJS, Next.js, TypeScript e JavaScript</strong>, com <strong>PostgreSQL e MySQL</strong> na camada de dados. Também tenho base sólida em <strong>PHP</strong> e desenvolvo com <strong>Vue.js</strong> e <strong>Flutter</strong>.
               </p>
               <p data-key="about_p3">
-                Inglês avançado — consumo documentação técnica e conteúdo internacional sem
-                barreiras, além de colaborar em projetos globais.
+                Curso Engenharia de Software e estou sempre estudando algo novo. Tenho inglês avançado, o que me permite consumir documentação técnica e conteúdo internacional sem barreiras e colaborar em projetos globais.
               </p>
               <div class="info-rapida">
                 <div><span aria-hidden="true">📍</span> <span data-key="location">Cascavel - PR</span></div>
@@ -224,8 +216,18 @@
             <div class="skill-category">
               <h3 data-key="backend">Back-end</h3>
               <div class="skills">
-                <span>PHP</span><span>Node.js</span><span>NestJS</span>
-                <span>TypeScript</span><span>Java</span><span>APIs REST</span>
+                <span>Node.js</span><span>NestJS</span><span>Python</span>
+                <span>PHP</span><span>TypeScript</span><span>JavaScript</span>
+                <span>Java</span><span>APIs REST</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3 data-key="ai_automation">IA & Automação</h3>
+              <div class="skills">
+                <span>OpenClaw</span><span>Python</span>
+                <span data-key="ai_integrations">Integrações com IA</span>
+                <span data-key="process_automation">Automação de Processos</span>
+                <span data-key="systems_integration">Integração de Sistemas</span>
               </div>
             </div>
             <div class="skill-category">
@@ -258,7 +260,21 @@
           <h2 id="experience-title" data-key="experience_title">Experiência Profissional</h2>
           <div class="timeline">
             <div class="timeline-item">
-              <div class="timeline-date" data-key="exp_date">Dez 2024 — Atual</div>
+              <div class="timeline-date" data-key="exp2_date">Jun 2026 — Atual</div>
+              <div class="timeline-content">
+                <h3 data-key="exp2_job_title">Assistente de Automação e IA Júnior</h3>
+                <h4 data-key="exp2_company">Alfama Foods · Cascavel/PR</h4>
+                <ul>
+                  <li data-key="exp2_item1">Desenvolvimento de soluções de Inteligência Artificial para processos internos</li>
+                  <li data-key="exp2_item2">Automação de processos com Python, Node.js e OpenClaw</li>
+                  <li data-key="exp2_item3">Integrações entre sistemas corporativos, APIs e ferramentas de IA</li>
+                  <li data-key="exp2_item4">Aplicações e serviços com Next.js, NestJS e TypeScript</li>
+                  <li data-key="exp2_item5">Modelagem e consultas em PostgreSQL e MySQL</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date" data-key="exp_date">Dez 2024 — Jun 2026</div>
               <div class="timeline-content">
                 <h3 data-key="exp_job_title">Desenvolvedor PHP</h3>
                 <h4 data-key="exp_company">Consilos Industrial · Cascavel/PR</h4>
@@ -278,7 +294,7 @@
             <div class="timeline-item">
               <div class="timeline-date" data-key="education_date">2024 — 2027</div>
               <div class="timeline-content">
-                <h4 data-key="education_course">Engenharia de Software - 5º Período</h4>
+                <h4 data-key="education_course">Engenharia de Software - 6º Período</h4>
                 <p data-key="education_institution">Faculdade Assis Gurgacz — Cascavel/PR (cursando)</p>
               </div>
             </div>
@@ -300,20 +316,22 @@
               </div>
               <p class="projeto-tagline" data-key="project1_tagline">Plataforma de aprendizado de inglês</p>
               <p data-key="project1_desc">
-                Aplicação web full stack para aprendizado de inglês por contextualização visual,
-                com sistema de flashcards, quizzes interativos e painel administrativo com controle
-                de acesso por papéis (RBAC).
+                Aplicação web full stack para aprendizado de inglês por contextualização visual:
+                o aluno cria prompts que viram traduções, imagens e frases semelhantes, estuda com
+                flashcards e quizzes e acompanha sua evolução em um dashboard de progresso.
               </p>
               <ul class="projeto-highlights" data-key="project1_highlights">
-                <li>Autenticação JWT com Access + Refresh tokens</li>
-                <li>RBAC com painel de administradores</li>
-                <li>API REST em CakePHP 5 + PostgreSQL via Supabase</li>
-                <li>Frontend em Vue 3 + Pinia + TypeScript + Vite</li>
-                <li>Containerizado com Docker e docker-compose</li>
+                <li>Autenticação JWT (Access + Refresh) com recuperação de senha por e-mail</li>
+                <li>RBAC com painel administrativo, gestão de papéis e estatísticas</li>
+                <li>API REST em CakePHP 5 com camadas de Services e Repositories</li>
+                <li>Rate limiting, upload de imagens no Cloudinary e monitoramento com Sentry</li>
+                <li>Frontend modular em Vue 3 + Pinia + TypeScript + Vite + Tailwind</li>
+                <li>Docker Compose e CI com PHPUnit, PHPStan e PHPCS</li>
               </ul>
               <div class="projeto-tech">
                 <span>CakePHP 5</span><span>Vue 3</span><span>TypeScript</span>
-                <span>PostgreSQL</span><span>Docker</span><span>JWT</span>
+                <span>PostgreSQL</span><span>Supabase</span><span>Docker</span>
+                <span>JWT</span><span>Cloudinary</span>
               </div>
               <div class="projeto-footer">
                 <span class="projeto-status status-active" data-key="project1_status">✅ Em desenvolvimento</span>

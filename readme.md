@@ -36,5 +36,5 @@ Depois acesse `http://localhost:8080`.
 
 | Projeto                                                                           | Descrição                           | Tecnologias                                      |
 | --------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------ |
-| [BeReady](https://github.com/BraianGaspar/Beready_Projeto)                        | Plataforma de aprendizado de inglês | CakePHP 5, Vue 3, TypeScript, PostgreSQL, Docker |
+| [BeReady](https://github.com/BereadyLTDA/Beready)                                 | Plataforma de aprendizado de inglês | Laravel 13, Vue 3, TypeScript, PostgreSQL, OpenAPI, Claude API, Docker |
 | [Efraim Ar-Condicionados](https://github.com/BraianGaspar/Efraim-ar-condicionado) | E-commerce de ar-condicionados      | Next.js, TypeScript, Node.js, Tailwind CSS       |

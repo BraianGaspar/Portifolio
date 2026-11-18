@@ -321,22 +321,23 @@
                 flashcards e quizzes e acompanha sua evolução em um dashboard de progresso.
               </p>
               <ul class="projeto-highlights" data-key="project1_highlights">
-                <li>Autenticação JWT (Access + Refresh) com recuperação de senha por e-mail</li>
-                <li>RBAC com painel administrativo, gestão de papéis e estatísticas</li>
-                <li>API REST em CakePHP 5 com camadas de Services e Repositories</li>
-                <li>Rate limiting, upload de imagens no Cloudinary e monitoramento com Sentry</li>
-                <li>Frontend modular em Vue 3 + Pinia + TypeScript + Vite + Tailwind</li>
-                <li>Docker Compose e CI com PHPUnit, PHPStan e PHPCS</li>
+                <li>API REST em Laravel 13 (migrada do CakePHP 5 com paridade total, validada por testes)</li>
+                <li>Contrato OpenAPI validado em cada resposta dos testes e tipos do frontend gerados a partir dele</li>
+                <li>Geração de traduções e frases com IA (Claude), com saída estruturada e limite diário por usuário</li>
+                <li>Autenticação JWT (Access + Refresh), login social e RBAC com painel administrativo</li>
+                <li>Assinatura recorrente com Stripe, repetição espaçada (SM-2) nos flashcards e quizzes corrigidos no servidor</li>
+                <li>Frontend modular em Vue 3 + Pinia + TypeScript + Tailwind, com 14 idiomas</li>
+                <li>Docker (Laravel Octane + FrankenPHP), CI com PHPUnit, Larastan, Vitest e Playwright</li>
               </ul>
               <div class="projeto-tech">
-                <span>CakePHP 5</span><span>Vue 3</span><span>TypeScript</span>
-                <span>PostgreSQL</span><span>Supabase</span><span>Docker</span>
-                <span>JWT</span><span>Cloudinary</span>
+                <span>Laravel 13</span><span>PHP 8.4</span><span>Vue 3</span><span>TypeScript</span>
+                <span>PostgreSQL</span><span>OpenAPI</span><span>Claude API</span><span>Stripe</span>
+                <span>Docker</span>
               </div>
               <div class="projeto-footer">
                 <span class="projeto-status status-active" data-key="project1_status">✅ Em desenvolvimento</span>
                 <a
-                  href="https://github.com/BraianGaspar/Beready_Projeto"
+                  href="https://github.com/BereadyLTDA/Beready"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn-small"

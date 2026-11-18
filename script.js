@@ -63,12 +63,13 @@ const translations = {
     project1_desc:
       'Aplicação web full stack para aprendizado de inglês por contextualização visual: o aluno cria prompts que viram traduções, imagens e frases semelhantes, estuda com flashcards e quizzes e acompanha sua evolução em um dashboard de progresso.',
     project1_highlights:
-      '<li>Autenticação JWT (Access + Refresh) com recuperação de senha por e-mail</li>' +
-      '<li>RBAC com painel administrativo, gestão de papéis e estatísticas</li>' +
-      '<li>API REST em CakePHP 5 com camadas de Services e Repositories</li>' +
-      '<li>Rate limiting, upload de imagens no Cloudinary e monitoramento com Sentry</li>' +
-      '<li>Frontend modular em Vue 3 + Pinia + TypeScript + Vite + Tailwind</li>' +
-      '<li>Docker Compose e CI com PHPUnit, PHPStan e PHPCS</li>',
+      '<li>API REST em Laravel 13 (migrada do CakePHP 5 com paridade total, validada por testes)</li>' +
+      '<li>Contrato OpenAPI validado em cada resposta dos testes e tipos do frontend gerados a partir dele</li>' +
+      '<li>Geração de traduções e frases com IA (Claude), com saída estruturada e limite diário por usuário</li>' +
+      '<li>Autenticação JWT (Access + Refresh), login social e RBAC com painel administrativo</li>' +
+      '<li>Assinatura recorrente com Stripe, repetição espaçada (SM-2) nos flashcards e quizzes corrigidos no servidor</li>' +
+      '<li>Frontend modular em Vue 3 + Pinia + TypeScript + Tailwind, com 14 idiomas</li>' +
+      '<li>Docker (Laravel Octane + FrankenPHP), CI com PHPUnit, Larastan, Vitest e Playwright</li>',
     project1_status: '✅ Em desenvolvimento',
     project2_title: 'Efraim Ar-Condicionados',
     project2_tagline: 'E-commerce completo',
@@ -163,12 +164,13 @@ const translations = {
     project1_desc:
       'Full stack web app for learning English through visual context: students create prompts that become translations, images and similar phrases, study with flashcards and quizzes, and track their evolution on a progress dashboard.',
     project1_highlights:
-      '<li>JWT authentication (Access + Refresh) with email password recovery</li>' +
-      '<li>RBAC with admin panel, role management and statistics</li>' +
-      '<li>REST API in CakePHP 5 with Services and Repositories layers</li>' +
-      '<li>Rate limiting, Cloudinary image uploads and Sentry monitoring</li>' +
-      '<li>Modular frontend in Vue 3 + Pinia + TypeScript + Vite + Tailwind</li>' +
-      '<li>Docker Compose and CI with PHPUnit, PHPStan and PHPCS</li>',
+      '<li>REST API in Laravel 13 (migrated from CakePHP 5 with full parity, verified by tests)</li>' +
+      '<li>OpenAPI contract validated on every test response, with frontend types generated from it</li>' +
+      '<li>AI-generated translations and phrases (Claude) with structured output and a per-user daily limit</li>' +
+      '<li>JWT authentication (Access + Refresh), social login and RBAC with an admin panel</li>' +
+      '<li>Recurring Stripe subscriptions, spaced repetition (SM-2) for flashcards and server-graded quizzes</li>' +
+      '<li>Modular frontend in Vue 3 + Pinia + TypeScript + Tailwind, in 14 languages</li>' +
+      '<li>Docker (Laravel Octane + FrankenPHP), CI with PHPUnit, Larastan, Vitest and Playwright</li>',
     project1_status: '✅ In development',
     project2_title: 'Efraim Air Conditioners',
     project2_tagline: 'Complete e-commerce',
@@ -263,12 +265,13 @@ const translations = {
     project1_desc:
       'Aplicación web full stack para aprender inglés mediante contextualización visual: el alumno crea prompts que se convierten en traducciones, imágenes y frases similares, estudia con flashcards y quizzes y sigue su evolución en un panel de progreso.',
     project1_highlights:
-      '<li>Autenticación JWT (Access + Refresh) con recuperación de contraseña por correo</li>' +
-      '<li>RBAC con panel administrativo, gestión de roles y estadísticas</li>' +
-      '<li>API REST en CakePHP 5 con capas de Services y Repositories</li>' +
-      '<li>Rate limiting, carga de imágenes en Cloudinary y monitoreo con Sentry</li>' +
-      '<li>Frontend modular en Vue 3 + Pinia + TypeScript + Vite + Tailwind</li>' +
-      '<li>Docker Compose y CI con PHPUnit, PHPStan y PHPCS</li>',
+      '<li>API REST en Laravel 13 (migrada desde CakePHP 5 con paridad total, verificada por pruebas)</li>' +
+      '<li>Contrato OpenAPI validado en cada respuesta de las pruebas y tipos del frontend generados a partir de él</li>' +
+      '<li>Generación de traducciones y frases con IA (Claude), con salida estructurada y límite diario por usuario</li>' +
+      '<li>Autenticación JWT (Access + Refresh), login social y RBAC con panel administrativo</li>' +
+      '<li>Suscripción recurrente con Stripe, repetición espaciada (SM-2) en flashcards y quizzes corregidos en el servidor</li>' +
+      '<li>Frontend modular en Vue 3 + Pinia + TypeScript + Tailwind, en 14 idiomas</li>' +
+      '<li>Docker (Laravel Octane + FrankenPHP), CI con PHPUnit, Larastan, Vitest y Playwright</li>',
     project1_status: '✅ En desarrollo',
     project2_title: 'Efraim Aires Acondicionados',
     project2_tagline: 'E-commerce completo',
